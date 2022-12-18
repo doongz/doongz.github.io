@@ -59,7 +59,7 @@ const config = {
       /** @type {import('@docusaurus/plugin-content-docs').Options} */
       ({
         id: 'community',
-        path: 'community',
+        path: 'community', // docs外面的文档，但路径只能是一层
         routeBasePath: 'community',
         // editUrl: ({locale, versionDocsDirPath, docPath}) => {
         //   if (locale !== 'en') {
@@ -70,8 +70,8 @@ const config = {
         // remarkPlugins: [npm2yarn],
         // editCurrentVersion: true,
         sidebarPath: require.resolve('./sidebarsCommunity.js'),
-        // showLastUpdateAuthor: true,
-        // showLastUpdateTime: true,
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
       }),
     ],
   ],
@@ -89,7 +89,7 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Notes',
           },
           {
             to: '/community/support',

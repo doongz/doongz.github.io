@@ -41,3 +41,10 @@ $ GIT_USER=<Your GitHub username> npx docusaurus deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+
+文件名中不能有 []
+
+`#` 标题 和 `##` 之间应该要求写
+
+不要在 docs 目录下写任何东西，一律从其他仓拷贝过来
