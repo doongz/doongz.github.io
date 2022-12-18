@@ -2,12 +2,21 @@
 
 echo "BUILD START"
 
-TOPIC=("Algorithm" "Competition" "Course" "Knowledge" "Math" "Skill")
+DIRECTORY=("Algorithm" "Competition" "Course" "Knowledge" "Math" "Skill")
+# FILES=("README.md")
 
-for sub_name in ${TOPIC[*]}; do
-    echo "process $sub_name"
-    rm -rf ./docs/$sub_name
-    cp -r ../notes/$sub_name/ ./docs/$sub_name
+rm -rf ./build/
+
+for dir in ${DIRECTORY[*]}; do
+    echo "process $dir"
+    rm -rf ./docs/$dir
+    cp -r ../notes/$dir/ ./docs/$dir
 done
 
-npx docusaurus start
+# for file in ${FILES[*]}; do
+#     echo "process $file"
+#     rm -rf ./docs/$file
+#     cp -r ../notes/$file ./docs/$file
+# done
+
+npx docusaurus build
