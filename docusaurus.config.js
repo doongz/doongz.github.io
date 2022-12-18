@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Doongz\'s Site',
+  tagline: 'Hi there',
+  url: 'https://doongz.github.io/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -37,15 +37,15 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -53,12 +53,33 @@ const config = {
       }),
     ],
   ],
-
+  plugins: [
+    [
+      'content-docs',
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: 'community',
+        path: 'community',
+        routeBasePath: 'community',
+        // editUrl: ({locale, versionDocsDirPath, docPath}) => {
+        //   if (locale !== 'en') {
+        //     return `https://crowdin.com/project/docusaurus-v2/${locale}`;
+        //   }
+        //   return `https://github.com/facebook/docusaurus/edit/main/website/${versionDocsDirPath}/${docPath}`;
+        // },
+        // remarkPlugins: [npm2yarn],
+        // editCurrentVersion: true,
+        sidebarPath: require.resolve('./sidebarsCommunity.js'),
+        // showLastUpdateAuthor: true,
+        // showLastUpdateTime: true,
+      }),
+    ],
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Home page',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -70,9 +91,51 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
+          {
+            to: '/community/support',
+            label: 'Community',
+            position: 'left',
+            activeBaseRegex: `/community/`,
+          },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            type: 'dropdown',
+            label: 'Courses',
+            position: 'left',
+            items: [
+              {
+                label: 'Machine Learning Compilation',
+                href: 'https://github.com/doongz/mlc-ai',
+              },
+              {
+                label: 'Stanford CS229: Machine Learning',
+                href: 'https://github.com/doongz/cs229',
+              },
+              {
+                label: '中国科学院 智能计算系统',
+                href: 'https://github.com/doongz/aics',
+              },
+              {
+                label: 'Harvard CS50’s Introduction to AI with Python',
+                href: 'https://github.com/doongz/cs50-ai',
+              },
+              {
+                label: 'MIT-6.824 Distributed Systems',
+                href: 'https://github.com/doongz/mit-6.824',
+              },
+              {
+                label: '南京大学 操作系统：设计与实现',
+                href: 'https://github.com/doongz/os-workbench',
+              },
+              {
+                label: 'MIT-6.S081 Operating Systems Engineering',
+                href: 'https://github.com/doongz/mit-6.s081',
+              },
+              // ... more items
+            ],
+          },
+          {
+            href: 'https://github.com/doongz',
             label: 'GitHub',
             position: 'right',
           },
@@ -121,7 +184,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Doongz Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
