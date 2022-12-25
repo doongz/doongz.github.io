@@ -3,6 +3,8 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const math = require('remark-math');
+const katex = require('rehype-katex');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -10,7 +12,7 @@ const config = {
   tagline: 'Hi there',
   url: 'https://doongz.github.io/',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
@@ -28,6 +30,11 @@ const config = {
     locales: ['en'],
   },
 
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+
   presets: [
     [
       'classic',
@@ -35,6 +42,8 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
@@ -52,6 +61,16 @@ const config = {
         },
       }),
     ],
+  ],
+  // for latex
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
   ],
   plugins: [
     [
@@ -86,18 +105,37 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
+            type: 'docSidebar',
             position: 'left',
-            label: 'Notes',
+            sidebarId: 'algorithmSidebar',
+            label: 'Algorithm',
           },
+          {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'skillSidebar',
+            label: 'Skill',
+          },
+          {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'knowledgeSidebar',
+            label: 'Knowledge',
+          },
+          // 放开所有的 notes
+          // {
+          //   type: 'doc',
+          //   docId: 'intro',
+          //   position: 'left',
+          //   label: 'All Notes',
+          // },
           {
             to: '/community/support',
             label: 'Community',
             position: 'left',
             activeBaseRegex: `/community/`,
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/blog', label: 'Blog', position: 'left' },
           {
             type: 'dropdown',
             label: 'Courses',
