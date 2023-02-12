@@ -18,12 +18,12 @@ tags: [summary]
 课程：
 
 - [x] 机器学习编译
+- [ ] Machine Learning(李宏毅)
 
 算法:
 
 - [ ] leetcode 1000题
 - [ ] leetcode 2000分
-- [ ] ~~codeforces 今年尽量去搞~~
 
 托福：
 
@@ -49,3 +49,6 @@ tags: [summary]
 
 ## Timeline
 
+Date : 2023-01-21 19:22:35 🧧🧧🧧
+
+> Total : 901 files, 103296 codes, 12 comments, 38092 blanks, all 141400 lines

@@ -37,8 +37,8 @@ Ctrl+K Ctrl+R：查看keyboard-shortcuts-windows.pdf
 | 查找替换                                     | Ctrl+H                       |                     |
 | 全局查找                                     | Ctrl+Shift+F                 |                     |
 | 全局查找替换                                 | Ctrl+Shift+H                 |                     |
-| 依次找出文中所有的当前选中的单词             | ctrl + d                     | command + d         |
-| 一次性找出文所有的当前选中的单词             | ctrl + shift + l             | shift + command + l |
+| 依次找出文中所有的当前选中的单词             | ctrl + D                     | command + D         |
+| 一次性找出文所有的当前选中的单词             | ctrl + shift + L             | shift + command + L |
 | 向左缩进                                     | Ctrl+[                       |                     |
 | 向右缩进                                     | Ctrl+]                       |                     |
 | 向上移动当前行                               | Alt+Up                       |                     |
@@ -57,26 +57,40 @@ Ctrl+K Ctrl+R：查看keyboard-shortcuts-windows.pdf
 
 ### 编辑器与窗口管理
 
-| 用途                                                 | win按键          |                     |
-| ---------------------------------------------------- | ---------------- | ------------------- |
-| 新建文件                                             | Ctrl+N           |                     |
-| 打开新窗口                                           |                  | shift + command + n |
-| 打开文件                                             | Ctrl+O           |                     |
-| 打开文件夹                                           | Ctrl+Shift+O     |                     |
-| 关闭当前文件                                         | Ctrl+W           |                     |
-| 进行代码页面切换                                     | alt + 1 2 3      |                     |
-| 打开终端                                             | ctrl + 反引号    |                     |
-| 返回当前代码页面                                     | ctrl + 1         |                     |
-| 目录页面和代码页面切换，文件资源管理器（Explorer）   | ctrl + shift + e |                     |
-| 移动当前文件到右窗口，若没有右窗口，则创建一个新窗口 | Ctrl+Alt+→       |                     |
-| 移动当前文件到左窗口                                 | Ctrl+Alt+←       |                     |
-| 切换文件窗口                                         | Ctrl+Tab         |                     |
-| 显示/隐藏侧边栏                                      | Ctrl+B           |                     |
-| 放大/缩小编辑器窗口                                  | Ctrl +/-         |                     |
-| 全屏显示                                             | F11              |                     |
-| git管理窗口（Source Control）                        | Ctrl+Shift+G     |                     |
-| 扩展（插件）管理窗口（Extentions）                   | Ctrl+Shift+X     |                     |
-|                                                      |                  |                     |
+| 用途                                                 | win按键                              |                     |
+| ---------------------------------------------------- | ------------------------------------ | ------------------- |
+| 新建文件                                             | Ctrl+N                               |                     |
+| 打开新窗口                                           |                                      | shift + command + n |
+| 打开文件                                             | Ctrl+O                               |                     |
+| 打开文件夹                                           | Ctrl+Shift+O                         |                     |
+| 关闭当前文件                                         | Ctrl+W                               |                     |
+| 进行代码页面切换                                     | alt + 1 2 3                          |                     |
+| 打开终端                                             | ctrl + 反引号                        |                     |
+| 返回当前代码页面                                     | ctrl + 1                             |                     |
+| 目录页面和代码页面切换，文件资源管理器（Explorer）   | ctrl + shift + e                     |                     |
+| 切换要编辑的文件                                     | ctrl + tab 或 ctrl + pageDown/pageUp |                     |
+| 移动当前文件到右窗口，若没有右窗口，则创建一个新窗口 | Ctrl+Alt+→                           |                     |
+| 移动当前文件到左窗口                                 | Ctrl+Alt+←                           |                     |
+| 切换文件窗口                                         | Ctrl+Tab                             |                     |
+| 显示/隐藏侧边栏                                      | Ctrl+B                               |                     |
+| 放大/缩小编辑器窗口                                  | Ctrl +/-                             |                     |
+| 全屏显示                                             | F11                                  |                     |
+| git管理窗口（Source Control）                        | Ctrl+Shift+G                         |                     |
+| 扩展（插件）管理窗口（Extentions）                   | Ctrl+Shift+X                         |                     |
+|                                                      |                                      |                     |
+|                                                      |                                      |                     |
+|                                                      |                                      |                     |
+|                                                      |                                      |                     |
+
+### vscode 文件标签栏多行显示
+
+1. 按住 ctrl + shift + p
+
+2. 输入 open workspace settings
+
+3. 搜索 workbench.editor.wrapTabs
+
+4. 选中 workbench.editor.wrapTabs
 
 ## 二、代码格式化
 
